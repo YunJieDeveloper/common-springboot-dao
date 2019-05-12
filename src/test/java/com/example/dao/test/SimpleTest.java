@@ -4,8 +4,6 @@ import com.example.dao.mongodb.MongoDBJDBC;
 import com.example.dao.mongodb.MongoDbRepository;
 import com.example.dao.springMongodb.dao.MongoSpringRepository;
 import com.example.dao.springMongodb.dao.MyMongoDao;
-import com.example.dao.springMongodb.model.User;
-import com.mongodb.client.MongoDatabase;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -36,27 +34,27 @@ public class SimpleTest {
 
     @Test
     public void testConnect() {
-        mongoDBJDBC.connectNoneAuth("127.0.0.1", "mycol");
+      //  mongoDBJDBC.connectNoneAuth("127.0.0.1", "mycol");
     }
 
     @Test
     public void testGetCollect() {
-        mongoDbRepository.getCollection("");
+     //   mongoDbRepository.getCollection("");
     }
     @Test
     public void testSpringRepository() {
-        User user = mongoSpringRepository.save(new User("1", "zhangsan", "zs"));
-        System.out.println(user.getId()+"\t"+user.getName()+"\t"+user.getNotes());
-        User one = mongoSpringRepository.findOne("1");
-        System.out.println(one.getId()+"\t"+one.getName()+"\t"+one.getNotes());
+//        User user = mongoSpringRepository.save(new User("1", "zhangsan", "zs"));
+//        System.out.println(user.getId()+"\t"+user.getName()+"\t"+user.getNotes());
+//        User one = mongoSpringRepository.findOne("1");
+//        System.out.println(one.getId()+"\t"+one.getName()+"\t"+one.getNotes());
 
     }
 
     @Test
     public void testDao() {
-       myMongoDao.save(new User("1", "zhangsan", "zs"));
-        User one = myMongoDao.getUserByName("zhangsan");
-        System.out.println(one.getId()+"\t"+one.getName()+"\t"+one.getNotes());
+      // myMongoDao.save(new User("1", "zhangsan", "zs"));
+      //  User one = myMongoDao.getUserByName("zhangsan");
+     //   System.out.println(one.getId()+"\t"+one.getName()+"\t"+one.getNotes());
 
     }
 
