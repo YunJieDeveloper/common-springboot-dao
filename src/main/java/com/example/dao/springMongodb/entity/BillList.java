@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.springframework.data.annotation.Id;
 //import org.springframework.data.annotation.Id;
 
 import java.util.ArrayList;
@@ -28,7 +29,7 @@ public class BillList {
     /**
      * mongo主键[String.format("%s%s", mobile, billDate)]
      */
-  //  @Id
+    @Id
     private String id;
     /**
      * 手机号
